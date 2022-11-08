@@ -107,12 +107,7 @@
 		6C9DF843291A8264003B2F4E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				6C9DF86C291AA64C003B2F4E /* Models */,
-				6C9DF854291A83BB003B2F4E /* Assembly */,
-				6C9DF853291A83A3003B2F4E /* Factory */,
-				6C9DF852291A839A003B2F4E /* Interactor */,
-				6C9DF851291A8392003B2F4E /* Presenter */,
-				6C9DF850291A838C003B2F4E /* View */,
+				6CCA30B0291AE2A700302D47 /* MainScreenModule */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -130,9 +125,9 @@
 		6C9DF845291A8275003B2F4E /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				6C9DF859291A845F003B2F4E /* MainScreenCoordinator */,
-				6C9DF855291A8411003B2F4E /* Coordinator.swift */,
 				6C9DF857291A8423003B2F4E /* RootCoordinator.swift */,
+				6C9DF855291A8411003B2F4E /* Coordinator.swift */,
+				6C9DF859291A845F003B2F4E /* MainScreenCoordinator */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -211,6 +206,19 @@
 				6C9DF86D291AA65F003B2F4E /* MainScreenModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		6CCA30B0291AE2A700302D47 /* MainScreenModule */ = {
+			isa = PBXGroup;
+			children = (
+				6C9DF86C291AA64C003B2F4E /* Models */,
+				6C9DF854291A83BB003B2F4E /* Assembly */,
+				6C9DF853291A83A3003B2F4E /* Factory */,
+				6C9DF852291A839A003B2F4E /* Interactor */,
+				6C9DF851291A8392003B2F4E /* Presenter */,
+				6C9DF850291A838C003B2F4E /* View */,
+			);
+			path = MainScreenModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
