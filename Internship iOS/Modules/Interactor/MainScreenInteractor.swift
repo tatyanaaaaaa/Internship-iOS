@@ -8,14 +8,10 @@
 import UIKit
 
 /// События которые отправляем из Interactor в Presenter
-protocol MainScreenInteractorOutput: AnyObject {
-  
-}
+protocol MainScreenInteractorOutput: AnyObject {}
 
 /// События которые отправляем от Presenter к Interactor
-protocol MainScreenInteractorInput {
-  
-}
+protocol MainScreenInteractorInput {}
 
 /// Интерактор
 final class MainScreenInteractor: MainScreenInteractorInput {
@@ -26,12 +22,21 @@ final class MainScreenInteractor: MainScreenInteractorInput {
   
   // MARK: - Private properties
   
+  private let networkService: NetworkService
+  
+  // MARK: - Initialization
+  
+  /// Инициализатор
+  /// - Parameter networkService: Сервис по работе с сетью
+  init(networkService: NetworkService) {
+    self.networkService = networkService
+  }
+  
+  // MARK: - Private properties
 }
 
 // MARK: - Appearance
 
 private extension MainScreenInteractor {
-  struct Appearance {
-    
-  }
+  struct Appearance {}
 }

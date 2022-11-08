@@ -8,9 +8,7 @@
 import UIKit
 
 /// События которые отправляем из `текущего модуля` в  `другой модуль`
-protocol MainScreenModuleOutput: AnyObject {
-  
-}
+protocol MainScreenModuleOutput: AnyObject {}
 
 /// События которые отправляем из `другого модуля` в  `текущий модуль`
 protocol MainScreenModuleInput {
@@ -71,26 +69,18 @@ final class MainScreenViewController: MainScreenModule {
 
 // MARK: - MainScreenViewOutput
 
-extension MainScreenViewController: MainScreenViewOutput {
-  
-}
+extension MainScreenViewController: MainScreenViewOutput {}
 
 // MARK: - MainScreenInteractorOutput
 
-extension MainScreenViewController: MainScreenInteractorOutput {
-  
-}
+extension MainScreenViewController: MainScreenInteractorOutput {}
 
 // MARK: - MainScreenFactoryOutput
 
-extension MainScreenViewController: MainScreenFactoryOutput {
-  
-}
+extension MainScreenViewController: MainScreenFactoryOutput {}
 
 // MARK: - Appearance
 
 private extension MainScreenViewController {
-  struct Appearance {
-    
-  }
+  struct Appearance {}
 }

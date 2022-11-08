@@ -8,14 +8,10 @@
 import UIKit
 
 /// Cобытия которые отправляем из Factory в Presenter
-protocol MainScreenFactoryOutput: AnyObject {
-  
-}
+protocol MainScreenFactoryOutput: AnyObject {}
 
 /// Cобытия которые отправляем от Presenter к Factory
-protocol MainScreenFactoryInput {
-  
-}
+protocol MainScreenFactoryInput {}
 
 /// Фабрика
 final class MainScreenFactory: MainScreenFactoryInput {
@@ -25,13 +21,10 @@ final class MainScreenFactory: MainScreenFactoryInput {
   weak var output: MainScreenFactoryOutput?
   
   // MARK: - Private properties
-  
 }
 
 // MARK: - Appearance
 
 private extension MainScreenFactory {
-  struct Appearance {
-    
-  }
+  struct Appearance {}
 }

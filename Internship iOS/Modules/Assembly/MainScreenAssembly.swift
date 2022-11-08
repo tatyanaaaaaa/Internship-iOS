@@ -11,9 +11,10 @@ import UIKit
 final class MainScreenAssembly {
   
   /// Собирает модуль `MainScreen`
+  /// - Parameter networkService: Сервис по работе с сетью
   /// - Returns: Cобранный модуль `MainScreen`
-  func createModule() -> MainScreenModule {
-    let interactor = MainScreenInteractor()
+  func createModule(_ networkService: NetworkService) -> MainScreenModule {
+    let interactor = MainScreenInteractor(networkService: networkService)
     let view = MainScreenView()
     let factory = MainScreenFactory()
     let presenter = MainScreenViewController(interactor: interactor,
