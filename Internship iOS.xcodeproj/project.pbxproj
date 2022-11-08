@@ -24,6 +24,9 @@
 		6C9DF863291A8C5D003B2F4E /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9DF862291A8C5D003B2F4E /* NetworkReachability.swift */; };
 		6C9DF866291A8FCE003B2F4E /* NetworkRequestHTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9DF865291A8FCE003B2F4E /* NetworkRequestHTTPMethod.swift */; };
 		6C9DF868291A90C7003B2F4E /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9DF867291A90C7003B2F4E /* NetworkError.swift */; };
+		6C9DF86B291AA35A003B2F4E /* MappingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9DF86A291AA35A003B2F4E /* MappingService.swift */; };
+		6C9DF86E291AA65F003B2F4E /* MainScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9DF86D291AA65F003B2F4E /* MainScreenModel.swift */; };
+		6C9DF870291AB370003B2F4E /* MainScreenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9DF86F291AB370003B2F4E /* MainScreenTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,9 @@
 		6C9DF862291A8C5D003B2F4E /* NetworkReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
 		6C9DF865291A8FCE003B2F4E /* NetworkRequestHTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestHTTPMethod.swift; sourceTree = "<group>"; };
 		6C9DF867291A90C7003B2F4E /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		6C9DF86A291AA35A003B2F4E /* MappingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappingService.swift; sourceTree = "<group>"; };
+		6C9DF86D291AA65F003B2F4E /* MainScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenModel.swift; sourceTree = "<group>"; };
+		6C9DF86F291AB370003B2F4E /* MainScreenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,7 @@
 		6C9DF843291A8264003B2F4E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				6C9DF86C291AA64C003B2F4E /* Models */,
 				6C9DF854291A83BB003B2F4E /* Assembly */,
 				6C9DF853291A83A3003B2F4E /* Factory */,
 				6C9DF852291A839A003B2F4E /* Interactor */,
@@ -114,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				6C9DF85C291A8831003B2F4E /* ApplicationServices.swift */,
+				6C9DF869291AA352003B2F4E /* MappingService */,
 				6C9DF85E291A890C003B2F4E /* NetworkService */,
 			);
 			path = ApplicationServices;
@@ -133,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				6C9DF84A291A8387003B2F4E /* MainScreenView.swift */,
+				6C9DF86F291AB370003B2F4E /* MainScreenTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -186,6 +195,22 @@
 				6C9DF867291A90C7003B2F4E /* NetworkError.swift */,
 			);
 			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		6C9DF869291AA352003B2F4E /* MappingService */ = {
+			isa = PBXGroup;
+			children = (
+				6C9DF86A291AA35A003B2F4E /* MappingService.swift */,
+			);
+			path = MappingService;
+			sourceTree = "<group>";
+		};
+		6C9DF86C291AA64C003B2F4E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6C9DF86D291AA65F003B2F4E /* MainScreenModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,9 +292,12 @@
 				6C9DF84C291A8387003B2F4E /* MainScreenViewController.swift in Sources */,
 				6C9DF863291A8C5D003B2F4E /* NetworkReachability.swift in Sources */,
 				6C9DF82F291A8012003B2F4E /* AppDelegate.swift in Sources */,
+				6C9DF86E291AA65F003B2F4E /* MainScreenModel.swift in Sources */,
 				6C9DF868291A90C7003B2F4E /* NetworkError.swift in Sources */,
 				6C9DF831291A8012003B2F4E /* SceneDelegate.swift in Sources */,
 				6C9DF858291A8423003B2F4E /* RootCoordinator.swift in Sources */,
+				6C9DF86B291AA35A003B2F4E /* MappingService.swift in Sources */,
+				6C9DF870291AB370003B2F4E /* MainScreenTableViewCell.swift in Sources */,
 				6C9DF866291A8FCE003B2F4E /* NetworkRequestHTTPMethod.swift in Sources */,
 				6C9DF860291A8913003B2F4E /* NetworkService.swift in Sources */,
 				6C9DF84E291A8387003B2F4E /* MainScreenInteractor.swift in Sources */,

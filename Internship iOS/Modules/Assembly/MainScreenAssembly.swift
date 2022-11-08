@@ -11,10 +11,14 @@ import UIKit
 final class MainScreenAssembly {
   
   /// Собирает модуль `MainScreen`
-  /// - Parameter networkService: Сервис по работе с сетью
+  /// - Parameters:
+  ///  - networkService: Сервис по работе с сетью
+  ///  - mappingService: Делает маппинг из `JSON` в структуру данных типа `Generic`
   /// - Returns: Cобранный модуль `MainScreen`
-  func createModule(_ networkService: NetworkService) -> MainScreenModule {
-    let interactor = MainScreenInteractor(networkService: networkService)
+  func createModule(_ networkService: NetworkService,
+                    _ mappingService: MappingService) -> MainScreenModule {
+    let interactor = MainScreenInteractor(networkService: networkService,
+                                          mappingService: mappingService)
     let view = MainScreenView()
     let factory = MainScreenFactory()
     let presenter = MainScreenViewController(interactor: interactor,

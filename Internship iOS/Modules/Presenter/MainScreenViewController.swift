@@ -8,7 +8,14 @@
 import UIKit
 
 /// События которые отправляем из `текущего модуля` в  `другой модуль`
-protocol MainScreenModuleOutput: AnyObject {}
+protocol MainScreenModuleOutput: AnyObject {
+  
+  /// Подключение к Интернету отсутствует
+  func failureNoInternetConnection()
+  
+  /// Что то пошло не так
+  func failureOther()
+}
 
 /// События которые отправляем из `другого модуля` в  `текущий модуль`
 protocol MainScreenModuleInput {
@@ -64,6 +71,9 @@ final class MainScreenViewController: MainScreenModule {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    moduleView.startloaderLoader()
+    interactor.getContent()
+    navigationItem.largeTitleDisplayMode = .never
   }
 }
 
@@ -73,11 +83,29 @@ extension MainScreenViewController: MainScreenViewOutput {}
 
 // MARK: - MainScreenInteractorOutput
 
-extension MainScreenViewController: MainScreenInteractorOutput {}
+extension MainScreenViewController: MainScreenInteractorOutput {
+  func didReceiveContent(_ content: MainScreenModel) {
+    factory.sortContent(content)
+  }
+  
+  func failureNoInternetConnection() {
+    moduleOutput?.failureNoInternetConnection()
+  }
+  
+  func failureOther() {
+    moduleOutput?.failureOther()
+  }
+}
 
 // MARK: - MainScreenFactoryOutput
 
-extension MainScreenViewController: MainScreenFactoryOutput {}
+extension MainScreenViewController: MainScreenFactoryOutput {
+  func didSortedContent(_ content: MainScreenModel) {
+    title = content.company.name
+    moduleView.updateContentWith(models: content.company.employees)
+    moduleView.stoploaderLoader()
+  }
+}
 
 // MARK: - Appearance
 

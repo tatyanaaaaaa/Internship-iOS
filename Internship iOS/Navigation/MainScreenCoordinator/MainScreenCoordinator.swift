@@ -46,7 +46,8 @@ final class MainScreenCoordinator: MainScreenCoordinatorProtocol {
   // MARK: - Internal func
   
   func start() {
-    let mainScreenModule = MainScreenAssembly().createModule(services.networkService)
+    let mainScreenModule = MainScreenAssembly().createModule(services.networkService,
+                                                             services.mappingService)
     self.mainScreenModule = mainScreenModule
     self.mainScreenModule?.moduleOutput = self
     
@@ -56,4 +57,36 @@ final class MainScreenCoordinator: MainScreenCoordinatorProtocol {
 
 // MARK: - MainScreenModuleOutput
 
-extension MainScreenCoordinator: MainScreenModuleOutput {}
+extension MainScreenCoordinator: MainScreenModuleOutput {
+  func failureNoInternetConnection() {
+    showAlertWith(title: Appearance().failureNoInternetConnection)
+  }
+  
+  func failureOther() {
+    showAlertWith(title: Appearance().failureOther)
+  }
+}
+
+// MARK: - Private
+
+extension MainScreenCoordinator {
+  func showAlertWith(title: String) {
+    let alert = UIAlertController(title: title,
+                                  message: "",
+                                  preferredStyle: .alert)
+    alert.addAction(UIAlertAction(title: Appearance().alertOk,
+                                  style: .default,
+                                  handler: { _ in }))
+    mainScreenModule?.present(alert, animated: true, completion: nil)
+  }
+}
+
+// MARK: - Appearance
+
+private extension MainScreenCoordinator {
+  struct Appearance {
+    let alertOk = "Ok"
+    let failureNoInternetConnection = "Ошибка сети"
+    let failureOther = "Что-то пошло не так"
+  }
+}
