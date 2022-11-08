@@ -12,11 +12,18 @@ protocol ApplicationServices {
   
   /// Сервис по работе с сетью
   var networkService: NetworkService { get }
+  
+  /// Сервис маппинга
+  var mappingService: MappingService { get }
 }
 
 // MARK: - Реализация ApplicationServices
 
 final class ApplicationServicesImpl: ApplicationServices {
+  var mappingService: MappingService {
+    MappingServiceImpl()
+  }
+  
   var networkService: NetworkService {
     NetworkServiceImpl()
   }
