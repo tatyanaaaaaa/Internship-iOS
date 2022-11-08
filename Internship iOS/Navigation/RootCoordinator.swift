@@ -13,8 +13,8 @@ final class RootCoordinator: Coordinator {
   
   private let window: UIWindow
   private let navigationController = UINavigationController()
+  private let services: ApplicationServices = ApplicationServicesImpl()
   private var coordinator: Coordinator?
-  
   
   // MARK: - Initialization
   
@@ -26,7 +26,7 @@ final class RootCoordinator: Coordinator {
   // MARK: - Internal func
   
   func start() {
-    let mainScreenCoordinator = MainScreenCoordinator(navigationController)
+    let mainScreenCoordinator = MainScreenCoordinator(navigationController, services)
     self.coordinator = mainScreenCoordinator
     mainScreenCoordinator.start()
     

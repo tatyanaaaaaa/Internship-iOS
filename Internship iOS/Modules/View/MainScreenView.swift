@@ -8,9 +8,7 @@
 import UIKit
 
 /// События которые отправляем из View в Presenter
-protocol MainScreenViewOutput: AnyObject {
-  
-}
+protocol MainScreenViewOutput: AnyObject {}
 
 /// События которые отправляем от Presenter ко View
 protocol MainScreenViewInput: AnyObject {
@@ -22,8 +20,6 @@ typealias MainScreenViewProtocol = UIView & MainScreenViewInput
 
 /// View для экрана
 final class MainScreenView: MainScreenViewProtocol {
-  
-  // MARK: - Public properties
   
   // MARK: - Internal properties
   
@@ -44,8 +40,6 @@ final class MainScreenView: MainScreenViewProtocol {
     fatalError("init(coder:) has not been implemented")
   }
   
-  // MARK: - Public func
-  
   // MARK: - Internal func
   
   // MARK: - Private func
@@ -62,7 +56,5 @@ final class MainScreenView: MainScreenViewProtocol {
 // MARK: - Appearance
 
 private extension MainScreenView {
-  struct Appearance {
-    
-  }
+  struct Appearance {}
 }

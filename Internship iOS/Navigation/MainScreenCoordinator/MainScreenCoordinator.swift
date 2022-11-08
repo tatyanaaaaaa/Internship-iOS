@@ -28,6 +28,7 @@ final class MainScreenCoordinator: MainScreenCoordinatorProtocol {
   // MARK: - Private variables
   
   private let navigationController: UINavigationController
+  private let services: ApplicationServices
   private var mainScreenModule: MainScreenModule?
   private var anyCoordinator: Coordinator?
   
@@ -35,14 +36,17 @@ final class MainScreenCoordinator: MainScreenCoordinatorProtocol {
   
   /// - Parameters:
   ///   - navigationController: UINavigationController
-  init(_ navigationController: UINavigationController) {
+  ///   - services: Сервисы приложения
+  init(_ navigationController: UINavigationController,
+       _ services: ApplicationServices) {
     self.navigationController = navigationController
+    self.services = services
   }
   
   // MARK: - Internal func
   
   func start() {
-    let mainScreenModule = MainScreenAssembly().createModule()
+    let mainScreenModule = MainScreenAssembly().createModule(services.networkService)
     self.mainScreenModule = mainScreenModule
     self.mainScreenModule?.moduleOutput = self
     
