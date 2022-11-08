@@ -19,6 +19,8 @@
 		6C9DF856291A8411003B2F4E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9DF855291A8411003B2F4E /* Coordinator.swift */; };
 		6C9DF858291A8423003B2F4E /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9DF857291A8423003B2F4E /* RootCoordinator.swift */; };
 		6C9DF85B291A8467003B2F4E /* MainScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9DF85A291A8467003B2F4E /* MainScreenCoordinator.swift */; };
+		6C9DF85D291A8831003B2F4E /* ApplicationServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9DF85C291A8831003B2F4E /* ApplicationServices.swift */; };
+		6C9DF860291A8913003B2F4E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9DF85F291A8913003B2F4E /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		6C9DF855291A8411003B2F4E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		6C9DF857291A8423003B2F4E /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
 		6C9DF85A291A8467003B2F4E /* MainScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenCoordinator.swift; sourceTree = "<group>"; };
+		6C9DF85C291A8831003B2F4E /* ApplicationServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationServices.swift; sourceTree = "<group>"; };
+		6C9DF85F291A8913003B2F4E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 		6C9DF844291A826C003B2F4E /* ApplicationServices */ = {
 			isa = PBXGroup;
 			children = (
+				6C9DF85E291A890C003B2F4E /* NetworkService */,
+				6C9DF85C291A8831003B2F4E /* ApplicationServices.swift */,
 			);
 			path = ApplicationServices;
 			sourceTree = "<group>";
@@ -163,6 +169,14 @@
 				6C9DF85A291A8467003B2F4E /* MainScreenCoordinator.swift */,
 			);
 			path = MainScreenCoordinator;
+			sourceTree = "<group>";
+		};
+		6C9DF85E291A890C003B2F4E /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				6C9DF85F291A8913003B2F4E /* NetworkService.swift */,
+			);
+			path = NetworkService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C9DF85D291A8831003B2F4E /* ApplicationServices.swift in Sources */,
 				6C9DF856291A8411003B2F4E /* Coordinator.swift in Sources */,
 				6C9DF85B291A8467003B2F4E /* MainScreenCoordinator.swift in Sources */,
 				6C9DF84B291A8387003B2F4E /* MainScreenFactory.swift in Sources */,
@@ -244,6 +259,7 @@
 				6C9DF82F291A8012003B2F4E /* AppDelegate.swift in Sources */,
 				6C9DF831291A8012003B2F4E /* SceneDelegate.swift in Sources */,
 				6C9DF858291A8423003B2F4E /* RootCoordinator.swift in Sources */,
+				6C9DF860291A8913003B2F4E /* NetworkService.swift in Sources */,
 				6C9DF84E291A8387003B2F4E /* MainScreenInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

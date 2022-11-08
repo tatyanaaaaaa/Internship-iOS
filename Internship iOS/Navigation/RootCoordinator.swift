@@ -13,8 +13,8 @@ final class RootCoordinator: Coordinator {
   
   private let window: UIWindow
   private let navigationController = UINavigationController()
+  private let services: ApplicationServices = ApplicationServicesImpl()
   private var coordinator: Coordinator?
-  
   
   // MARK: - Initialization
   
